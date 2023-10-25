@@ -25,7 +25,7 @@
 
 **Image Feature Extraction**
 
-6. Choose a pre-trained convolutional neural network (CNN) such as ResNet50. Download the weights and architecture.
+6. Using a pre-trained convolutional neural network (CNN),ResNet50. Download the weights and architecture.
 
 7. Modify the pre-trained CNN by removing the classification layers and keep the layers responsible for feature extraction.
 
