@@ -6,22 +6,22 @@
 1. Loading the Data set
 
 2. Preprocess the image data:
-   - Resize images to a uniform size (224x224 pixels).
-   - Normalize pixel values.
-   - Augment dataset with techniques, rotation, flipping, and brightness adjustments to increase its diversity.
+   Resize images to a uniform size (224x224 pixels).
+    Normalize pixel values.
+    Augment dataset with techniques, rotation, flipping, and brightness adjustments to increase its diversity.
 
 3. Preprocess the textual questions:
-   - Tokenize the questions into words.
-   - Convert words into word embeddings (Word2Vec) to represent text as numerical vectors.
+   Tokenize the questions into words.
+   Convert words into word embeddings (Word2Vec) to represent text as numerical vectors.
    
 4. Create a vocabulary for the question words.
 
 **Phase 2: Data Splitting**
 
 5. Split the question, labels, images into three subsets:
-   - Training set ( 70% of the data).
-   - Validation set (15% of the data).
-   - Test set ( 15% of the data).
+   Training set ( 70% of the data).
+   Validation set (15% of the data).
+   Test set ( 15% of the data).
 
 **Phase 3: Image Feature Extraction**
 
@@ -32,11 +32,11 @@
 8. Extract image features from your preprocessed images using the modified CNN. These features will be used as the image input to your VQA model.
 
 **Phase 4: Model Architecture**
-   - Create the image input layer using the extracted image features using CNN.
-   - Create the text input layer for the tokenized and embedded questions RNN.
-   - Merge the image and text features.
-   - Add one or more LSTM layers to process sequential information in the question.
-   - Include fully connected layers to predict the answer.
+Create the image input layer using the extracted image features using CNN.
+Create the text input layer for the tokenized and embedded questions RNN.
+Merge the image and text features.
+Add one or more LSTM layers to process sequential information in the question.
+Include fully connected layers to predict the answer.
      
 *note: we can also use existing models such as BERT or GPT-2, but that didn't work in my case. so, made it from scratch**
 
